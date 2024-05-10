@@ -1,0 +1,82 @@
+header{
+    background-color: rgb(84, 84, 151);
+}
+
+p{
+    color: aqua;
+}
+
+header p{
+    color: red;
+}
+
+footer p{
+    color: blueviolet;
+}
+
+/* main section p{
+    color: rgb(83, 128, 0);
+} */
+
+/*
+clases: nos van a parmitir diferenciar las etiquetas
+y vamos a poder repetirlas cuando las necesitemos
+
+cuando nosotros nombramos una clase, esta tiene que hacer referencia
+a la accion o seccion que va a representar 
+
+ --- section principal ----
+
+camelCase =  sectionPrincipal es la mas utilizada en css
+kebab = section-principal esta tambien es utilizada en css
+
+snake_case = section_principal esta no se suele utilizar
+BEM = BLOQUE ELEMENTO MODIFICADOR.
+*/
+.navbar{
+    list-style: none;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+section{
+    background-color: rgb(44, 196, 247);
+}
+
+section h1{
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ section p{
+    color: beige;
+}
+section p{
+    color: rgb(246, 246, 76);
+}
+section p{
+    color: rgb(219, 37, 219);
+}
+
+.sectionPrincipal{
+    background-color: lightsalmon;
+}
+
+.sectionPrincipal p{
+    color: black;
+}
+/**
+id = 
+
+*/
+
+#anchoEspada{
+    background-color: rgb(242, 58, 58);
+}
+
+
+
+
+
