@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main-index .section-principal{
+    display: flex;
+    align-items: center;
+}
+
+.main-index .section-principal img{
+    width: 50%;
+}
