@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);}
+/* .gradiente-lineal{
+    width: 12.5rem;
+    height: 200px;
+    background: rgb(2,0,36);
+    background: linear-gradient(193deg, rgba(2,0,36,1) 3%, rgba(65,199,207,1) 40%, rgba(215,125,174,1) 68%, rgba(255,0,228,1) 100%);
+}
+
+.gradiente-radial{
+    width: 12.5rem;
+    height: 200px;
+    background-image: radial-gradient(ellipse 25% 25%, blue, red);
+} */
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(to right top, #ecffb5, #ddfa94, #cdf573, #bcf04d, #a8eb12);
+    background-clip: text;
+    color: transparent;
+}   
+
+/*las transformaciones, nos permiten modificar visualmente elementos de HTML.
+    vamos a poder rotar elementos, escalarlos, inclinarlos, trasladar los elementos.
+
+    como funciona las transformaciones.
+
+    selector{
+        transform: 
+
+    */
+
+
+ .principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+  .principal div{
+    transform: translate(12.5rem, -20px);
+    /**
+    si quiero mover el elemento solamente en el ejeX translateX
+    si quiero mover el elemento solamente en el ejeY translateY
+    y si quiero mover los elementos al mismo tiempo, translate( X , Y)
+    **/
+    background-color: rgba(128, 128, 128, 0.38);
+    padding: 1.25rem;
+  }
+
+
+ .principal img{
+    width: 37.5rem
+ }
+
+.principal img:hover{
+    transform: rotate(10deg);
+}
+
+.principal .rectangulo{
+    width: 200px;
+    height: 31.25rem;
+    transform: rotate(40deg);
+}
+
+ .productos-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+ }
+
+
+
+
+ .container-card{
+    width: 15.625rem;
+    height: 18.75rem;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.57);
+ }
+
+ .container-card .card-img{
+    width: 100%;
+    height: 60%;
+  
+ }
+
+ .container-card .card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: blur(5px)
+}
+.container-card .card-img img:hover{
+    transform: scale(1.3);/*escalar, todas las imagenes inician en 1**/
+    filter: drop-shadow(2px 2px 5px rgb(49, 49, 49));
+    transition: transform 500ms linear , filter 200ms linear;
+}
+
+/* ejemplo de nesting
+.container-card{
+    width: 15.625rem;
+    height: 18.75rem;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.57);
+    .card-img{
+        width: 100%;
+        height: 60%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: blur(5px)
+            &:hover{
+                transform: scale(1.3);
+                filter: drop-shadow(2px 2px 5px rgb(49, 49, 49));
+                transition: transform 500ms linear , filter 200ms linear;
+            
+            }
+        }
+    }
+}
+*/
+
+/*
+transition: significa transicion y nos permite a nosotros
+contral el tiempo de los elementos, 
+transition-property: especifica las propiedades css que seran animadas.
+transition-duration: definir la duracion de la transicion. 
+transition-timing-function: curva de bezier les decimos como va a ser la velocidad
+transition-delay: nos dice el tiempo de espera en el cual se va a ejecutar la transition.
+
+**/
+
+
+/**
+animaciones: permiten que un elemento cambie de estilos en un periodo especifico de tiempo.
+
+crear efectos visuales.
+
+se declara la animacion, y luego se trabaja con reglas llamadas keyframes.
+Los keiframes, son momentos donde queremos que la animacion ejecute algo. 
+
+
+**/
+
+.animacion{
+    /* width: 300px;
+    height: 300px; */
+    animation-name: pepito;
+    animation-duration: 700ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 200ms;
+}
+
+@keyframes pepito {
+        0%{
+            background-color: lightcoral;
+        }
+        10%{
+            background-color: yellow;
+        }
+        20%{
+            border: 1px solid black;
+        }
+        50%{
+            background-color: black;
+            border-radius: 50%;
+            border-color: white;
+        }
+        100%{
+            background-color: lightcoral;
+        }
+
+
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 0.8s both;
+	        animation: wobble-hor-bottom 0.8s both;
+}
+
+
+ @-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  
+
+
+  .goku:hover{
+    filter: drop-shadow(5px 5px 10px yellow);
+  }
